@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainform {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.fimg {
+    width: 720px;
+    height: 520px;
+    margin-top: 200px;
+    position: absolute;
+    z-index: 2;
+    background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fback {
+    width: 1200px;
+    height: 900px;
+    border: 2px solid lightgray;
+    border-radius: 50% 0% 0% 50%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-3.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+    animation: moveBackground 2s linear infinite;
+    background-color: white;
+}
+
+@keyframes moveBackground {
+
+    0%,
+    100% {
+        background-position: 95% top;
+    }
+
+    50% {
+        background-position: 100% top;
+    }
+
+}
+
+.fimg1 {
+    height: 450px;
+    width: 450px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 190px;
+    border-radius: 50%;
+}
+
+.fimg1 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.form {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background-color: transparent;
+    margin-left: 470px;
+    margin-top: 150px;
+}
+
+.ft {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fh {
+    width: 100%;
+    height: 160px;
+    font-size: 30px;
+}
+
+.mainform1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.mf1 {
+    height: 100%;
+    width: 30%;
+
+}
+
+.mf11 {
+    width: 95%;
+    height: 22%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+
+}
+
+.mf2 {
+    width: 70%;
+    height: 100%;
+}
+
+.f21 {
+    width: 90%;
+    height: 20%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.f21 input[type="text"],
+.f21 input[type="email"],
+.f21 input[type="number"] {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    background-color: #F2F5F9;
+    color: #97A2B7;
+}
+
+.f21 input[type="range"] {
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: #97A2B7;
+    margin-bottom: 10px;
+}
+
+.f21 input[type="button"] {
+    height: 70%;
+    width: 60%;
+    background-color: #015FC9;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.f21 p {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.range-slider {
+    padding: 10px 55px 10px 0;
+    margin: 0 0 30px;
+    position: relative;
+}
+
+.range-slider input[type="range"] {
+    background: #3aa4c4;
+    width: 100%;
+    height: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb {
+    background: #e7e7e7;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 0 0 0 4px #f5f5f5, 0 0 12px rgba(0, 0, 0, 0.8), 0 0 0 8px #f5f5f5;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out 0s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.range-slider input[type="range"]:active::-webkit-slider-thumb,
+.range-slider input[type="range"]::-webkit-slider-thumb:hover {
+    transform: rotate(45deg);
+}
+
+.range-slider input[type="range"]:active::-webkit-slider-thumb {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 0 4px #f5f5f5, 0 0 12px rgba(0, 0, 0, 0.8), 0 0 0 8px #f5f5f5;
+}
+
+.range-slider input[type="range"]::-moz-range-thumb {
+    background: #e7e7e7;
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 0 0 0 4px #f5f5f5, 0 0 12px rgba(0, 0, 0, 0.8), 0 0 0 8px #f5f5f5;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.range-slider input[type="range"]:active::-moz-range-thumb,
+.range-slider input[type="range"]::-moz-range-thumb:hover {
+    transform: rotate(45deg);
+}
+
+.range-slider input[type="range"]:active::-moz-range-thumb {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 0 4px #f5f5f5, 0 0 12px rgba(0, 0, 0, 0.8), 0 0 0 8px #f5f5f5;
+}
+
+.range-slider .range-value {
+    color: #fff;
+    background: #333;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 45px;
+    padding: 7px 0;
+    transform: translateY(50%);
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+}
+
+::-moz-range-track {
+    background: transparent;
+    border: 0;
+}
+
+
+/* CSS for Responsive Design */
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+    .mainform {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fback {
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-3.png);
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: white;
+    }
+
+    .fimg {
+        width: 80%;
+        margin-top: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .fimg1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .fimg1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="mainform">
+        <div class="fimg">
+            <div class="fimg1">
+                <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insurance-two-img-1.jpg" alt="">
+            </div>
+        </div>
+        <div class="fback">
+            <div class="form">
+                <div class="ft">
+                    <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/section-title-shape-1.png"
+                        height="50%" alt="">
+                    <p>FREE QUOTE</p>
+                    <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/section-title-shape-2.png"
+                        height="50%" alt="">
+                </div>
+                <div class="fh">
+                    <h1>Get an insurance quote
+                        to get started!
+                    </h1>
+                </div>
+                <div class="mainform1">
+                    <div class="mf1">
+                        <div class="mf11" onclick="highlight(this)">
+                            <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-1.png"
+                                style="padding-right: 10px;" alt="">
+                            <b>Home insurance</b>
+                        </div>
+                        <div class="mf11" onclick="highlight(this)">
+                            <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-2.png"
+                                style="padding-right: 10px;" alt="">
+                            <b>Car insurance</b>
+                        </div>
+                        <div class="mf11" onclick="highlight(this)">
+                            <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-3.png"
+                                style="padding-right: 10px;" alt="">
+                            <b>Life insurance</b>
+                        </div>
+                        <div class="mf11" onclick="highlight(this)">
+                            <img src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-4.png"
+                                style="padding-right: 10px;" alt="">
+                            <b>Health insurance</b>
+                        </div>
+                    </div>
+                    
+                    <div class="mf2">
+                        <div class="f21">
+                            <input type="text" placeholder="Full name" required>
+                        </div>
+                        <div class="f21">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="f21">
+                            <input type="number" placeholder="Number" required>
+                        </div>
+                        <div class="f21">
+                            <h2>Limit of Balance</h2>
+                            <div class="demo">
+                                <div class="range-slider">
+                                    <input type="range" value="70000" min="0" max="90000" range="true">
+                                    <span class="range-value">50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f21" style="margin-top: 10px;">
+                            <!-- <input type="button" value="Get a Quote Now"> -->
+                        <div class="agentbtn"><a href="#"><button style="background-color:#015fc9;width:200px;height:70px;margin-top:0px;"><span>Get a Quote Now</span></button></a></div>
+    
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
